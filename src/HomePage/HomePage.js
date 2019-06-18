@@ -28,7 +28,7 @@ function HomePage() {
             <h3>All of your Blissful Plant's in one place</h3>
         </header>
        
-        <p>Your water schedule will showcase all of your plant babies and help you on stay on track with your watering goals.</p>
+        <p>Your water schedule will showcase all of your plant babies and help you stay on track with your watering goals.</p>
       </section>
       <Footer />
       </>

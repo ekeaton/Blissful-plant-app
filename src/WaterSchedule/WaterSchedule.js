@@ -18,13 +18,14 @@ function WaterSchedule(props) {
                       <section className='container'>
                           <p>{plant.note}</p>
                             <p>Next watering</p>
-                            <p>{console.log(plant.water_date)}</p>
+                            <p>{plant.water_date.toString()}</p>
                             <input type="button" value="Edit"/>
                             <input type="button" value="Delete"/>
                       </section>
                   </section>
               )
           })}
+
           </>
      </>
   )
