@@ -1,22 +1,22 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+
 import './main-nav.css'
 
 function MainNav() {
     return(
       <nav className="navbar">
       <div className="logo">
-            <Link
+            <a
              className="nav__link"
-             to="/"
+             href="/"
              rel="noopener noreferrer">
            Logo
-           </Link>
+           </a>
         </div>
 
         <div className="nav-menu">
-         <Link to="/signup" className="nav-link">Sign Up</Link>
-         <Link to="/demo" className="nav__link">Demo</Link>
+         <a href="/signup" className="nav-link">Sign Up</a>
+         <a href="/demo" className="nav__link">Demo</a>
         </div>
       </nav>
     )
