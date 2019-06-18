@@ -9,7 +9,6 @@ function MainNav() {
             <Link
              className="nav__link"
              to="/"
-             target="_blank"
              rel="noopener noreferrer">
            Logo
            </Link>
