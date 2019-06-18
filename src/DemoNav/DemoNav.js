@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 import './demo-nav.css'
 
@@ -6,16 +7,16 @@ function DemoNav() {
     return(
       <nav className="navbar">
         <div className="logo">
-            <a
+            <Link
              className="nav__link"
-             href="/"
+             to="/"
              rel="noopener noreferrer">
            Logo
-           </a>
+           </Link>
         </div>
         <div className="nav-menu">
-         <a href="/demo" className="nav__link">Water Schedule</a>
-         <a href="/form" className="nav__link">Add Plant</a>
+         <Link to="/demo" className="nav__link">Water Schedule</Link>
+         <Link to="/form" className="nav__link">Add Plant</Link>
         </div>
       </nav>
     )

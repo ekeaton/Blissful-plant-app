@@ -29,14 +29,14 @@ class App extends React.Component {
           exact path='/' 
           component={HomePage} />
         <Route 
-          exact path='/signup' 
+          path='/signup' 
           component={SignUp} />
         <Route
           path='/demo'
           render={(props) => <WaterSchedule {...props} plants={store} />}
           />
         <Route 
-           exact path='/form' 
+           path='/form' 
            component={PlantForm}/>
        </Switch>
       </main>

@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 import './main-nav.css'
 
@@ -6,17 +7,17 @@ function MainNav() {
     return(
       <nav className="navbar">
       <div className="logo">
-            <a
+            <Link
              className="nav__link"
-             href="/"
+             to="/"
              rel="noopener noreferrer">
            Logo
-           </a>
+           </Link>
         </div>
 
         <div className="nav-menu">
-         <a href="/signup" className="nav-link">Sign Up</a>
-         <a href="/demo" className="nav__link">Demo</a>
+         <Link to="/signup" className="nav-link">Sign Up</Link>
+         <Link to="/demo" className="nav__link">Demo</Link>
         </div>
       </nav>
     )
