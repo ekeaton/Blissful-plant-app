@@ -1,0 +1,30 @@
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding: 1% 0;
+    background-color: #8FBC8F;
+}
+
+.nav-logo {
+    width: 100px; 
+}
+
+div.logo {
+  float: left;
+}
+
+div.nav-menu {
+  float: right;
+}
+
+/* Style the links inside the navigation bar */
+.nav-menu a {
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}

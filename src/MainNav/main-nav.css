@@ -6,15 +6,11 @@ nav {
     right: 0;
     z-index: 10;
     padding: 1% 0;
-    /*background-color: #aaa;*/
+    background-color: #8FBC8F;
 }
 
-header {
-    padding: 45px 15px;
-  }
-
   .nav-logo {
-      width: 200px; 
+      width: 150px; 
   }
 
   div.logo {
