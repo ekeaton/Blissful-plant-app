@@ -12,7 +12,7 @@ function HomePage() {
             <h3>Do you forget to water your plants?</h3>
         </header>
        
-        <p>We get it, having an indoor garden with beautiful lushes plants can seem difficult. But the key to plants success is water. Plants deserve to have unique water schedules. Blissful Plant reminds you to water your plants to keep them happy and healthy.</p>
+        <p>We get it, having an indoor garden with beautiful luscious plants can seem difficult. But the key to plants success is water. Plants deserve to have unique water schedules. Blissful Plant reminds you to water your plants to keep them happy and healthy.</p>
       </section>
 
       <section>
