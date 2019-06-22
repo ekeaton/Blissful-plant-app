@@ -1,0 +1,105 @@
+.ReactModal__Overlay {
+    z-index: 99999;
+  }
+  
+  .ReactModalPortal > div {
+    opacity: 0;
+  }
+  
+  .ReactModalPortal .ReactModal__Overlay {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    transition: all .3s ease-in-out;
+  }
+  
+  .ReactModalPortal .ReactModal__Overlay--after-open {
+    opacity: 1;
+  }
+  
+  .ReactModalPortal .ReactModal__Overlay--before-close {
+    opacity: 0;
+  }
+  
+  .modal {
+    background: linear-gradient();
+    border-radius: 5px;
+    color: white;
+    outline: none;
+    padding: 2rem 4rem;
+    position: relative;
+    text-align: center;
+  
+  
+    @include respond-650-width {
+      width: 80%;
+    }
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(80, 77, 77, 0.75);
+  }
+
+.beta-form__close {
+  position: relative;
+	padding: 10px 15px 10px 15px;
+	color: #FFF;
+	margin: 0 auto;
+	background: #1abc9c;
+	font-size: 16px;
+	text-align: center;
+	font-style: normal;
+	width: 10%;
+    border: 1px solid #16a085;
+    border-radius: 10%;
+	border-width: 1px 1px 3px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.beta-form__button {
+    position: relative;
+	padding: 10px 10px;
+	color: #FFF;
+	margin: 0 auto;
+	background: #1abc9c;
+	font-size: 15px;
+	text-align: center;
+	font-style: normal;
+	width: 20%;
+    border: 1px solid #16a085;
+    border-radius: 10%;
+	border-width: 1px 1px 3px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+input[type="email"] {
+    font-family: Georgia, "Times New Roman", Times, serif;
+	background: rgba(255,255,255,.1);
+	border: none;
+	border-radius: 4px;
+	font-size: 15px;
+	margin: 0;
+	outline: 0;
+	padding: 10px;
+	width: 100%;
+	box-sizing: border-box; 
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box; 
+	background-color: #e8eeef;
+	color:#8a97a0;
+	-webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+	box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+	margin-bottom: 30px;
+}
+
+
+.beta-form__brand {
+    width: 10%;
+}

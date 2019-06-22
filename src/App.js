@@ -3,44 +3,99 @@ import { Route, Switch } from 'react-router-dom'
 import MainNav from './MainNav/MainNav';
 import WaterSchedule from './WaterSchedule/WaterSchedule'
 import './App.css';
-import SignUp from './SignUp/SignUp';
+import SignUpModal from './SignUpModal/SignUpModal';
 import HomePage from './HomePage/HomePage';
-import PlantForm from './PlantForm/PlantForm';
-import store from './store';
+import AddPlant from './AddPlant/AddPlant';
+import config from './config';
+import BlissfulContext from './BlissfulContext';
+import ErrorBoundary from "./ErrorBoundary";
+
 
 
 class App extends React.Component {
 
   state = { 
-    store: store
+    plants: [],
+  }
+
+  componentDidMount(){
+		const plantRes = fetch(`${config.API_ENDPOINT}/api/plants`, {
+				method:'GET',
+			});
+	
+		
+		Promise.all([plantRes])
+		.then (responses => Promise.all(responses.map(res => res.json())))
+
+		Promise.all([
+			fetch(`${config.API_ENDPOINT}/api/plants`)
+		])
+		.then (([plantRes]) => {
+			return Promise.all([
+				plantRes.json()
+				])
+		})
+		 
+		.then(([plants]) => {
+			this.setState({ plants })
+		})
+	}
+
+	
+  handleDeletePlant = plantId => {
+    this.setState({
+      plants: this.state.plants.filter(plant => plant.id !== plantId)
+    })
   }
 
 
+  	handleAddPlant = newPlant => {
+  		const newPlants = this.state.plants.map(plant => 
+  			(plant.id === newPlant.id)
+  			? newPlant
+  			: plant)
+  		this.setState({
+  			plants:newPlants
+  		})
+  	};
+
+  	
 
 
   render() {
-  const {store} = this.state;
+    const value = {
+			plants: this.state.plants,	
+      deletePlant: this.handleDeletePlant,
+      addPlant: this.handleAddPlant
+	
+		}
+  
   return (
-    <div className="App">
+    <BlissfulContext.Provider value={value}>
+    console.log(value);
+    <div className="App app-background">
      <MainNav/>
-      <main className="app-background">
+      <main className="main-content">
       <Switch>
+      <ErrorBoundary>
         <Route 
           exact path='/' 
           component={HomePage} />
         <Route 
-          path='/signup' 
-          component={SignUp} />
+          path='/signup-modal' 
+          component={SignUpModal} />
         <Route
           path='/demo'
-          render={(props) => <WaterSchedule {...props} plants={store} />}
+          component={WaterSchedule}
           />
         <Route 
-           path='/form' 
-           component={PlantForm}/>
+           path='/add-plant' 
+           component={AddPlant}/>
+        </ErrorBoundary>
        </Switch>
       </main>
     </div>
+    </BlissfulContext.Provider>
   )
  }
 }

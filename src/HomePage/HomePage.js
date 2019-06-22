@@ -1,11 +1,13 @@
 import React from 'react';
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
+import './home-page.css'
 
 
 function HomePage() {
     return (
       <>
+      <div className="home-card">
        <Header/>
          <section>
         <header>
@@ -30,6 +32,7 @@ function HomePage() {
        
         <p>Your water schedule will showcase all of your plant babies and help you stay on track with your watering goals.</p>
       </section>
+      </div>
       <Footer />
       </>
     )
