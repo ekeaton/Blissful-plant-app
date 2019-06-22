@@ -1,10 +1,7 @@
 .ReactModal__Overlay {
     z-index: 99999;
   }
-  
-  .ReactModalPortal > div {
-    opacity: 0;
-  }
+
   
   .ReactModalPortal .ReactModal__Overlay {
     align-items: center;
@@ -29,11 +26,6 @@
     padding: 2rem 4rem;
     position: relative;
     text-align: center;
-  
-  
-    @include respond-650-width {
-      width: 80%;
-    }
   }
   
   .overlay {
