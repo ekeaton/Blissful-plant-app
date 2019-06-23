@@ -49,7 +49,7 @@ class WaterSchedule extends React.Component {
                             <h4>{plant.name}</h4>
                             <section className='container'>
                                 <p>{plant.note}</p>
-                                <p>In {plant.num_days} days</p>
+                                <p>Water me in {plant.num_days} days</p>
                                   <p>Next watering</p>
                                   <p>{plant.water_date.toString()}</p>
                             </section>

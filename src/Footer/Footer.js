@@ -1,9 +1,10 @@
 import React from 'react';
+import './footer.css'
 
 function Footer() {
     return (
         <footer>
-             <h3>Created by: Estelle Keaton</h3>
+             <p>Created by: Estelle Keaton</p>
              <p>Copyright @ 2019</p>
         </footer>
     )

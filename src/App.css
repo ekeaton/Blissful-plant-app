@@ -3,10 +3,7 @@
 }
 
 
-section {
-  min-height: 200px;
-  padding: 30px 15px;
-}
+
 
 p {
   margin: 0 auto;
@@ -17,10 +14,6 @@ p + p {
   margin-top: 15px;
 }
 
-footer {
-  padding: 1% 0;
-  background-color: #8FBC8F;
-}
 
 .app-background {
   background: url('https://i.imgur.com/5jqecQC.png');

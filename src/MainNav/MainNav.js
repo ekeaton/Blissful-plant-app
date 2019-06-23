@@ -24,7 +24,7 @@ class MainNav extends React.Component {
                className="nav__link"
                to="/"
                rel="noopener noreferrer">
-            <img className="nav-logo" src="https://i.imgur.com/0tulmGN.png" alt="blissful-plant logo"/>
+            <img className="nav-logo" src="https://i.imgur.com/pAcLOh0.png" alt="blissful-plant logo"/>
              </Link>
           </div>
   
