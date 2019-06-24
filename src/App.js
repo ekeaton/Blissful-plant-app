@@ -10,7 +10,7 @@ import config from './config';
 import BlissfulContext from './BlissfulContext';
 import ErrorBoundary from "./ErrorBoundary";
 
-
+const {API_BASE_URL} = config;
 
 class App extends React.Component {
 
@@ -19,7 +19,7 @@ class App extends React.Component {
   }
 
   componentDidMount(){
-		const plantRes = fetch(`${config.API_ENDPOINT}/api/plants`, {
+		const plantRes = fetch(`${API_BASE_URL}}/plants`, {
 				method:'GET',
 			});
 	
@@ -28,7 +28,7 @@ class App extends React.Component {
 		.then (responses => Promise.all(responses.map(res => res.json())))
 
 		Promise.all([
-			fetch(`${config.API_ENDPOINT}/api/plants`)
+			fetch(`${API_BASE_URL}/plants`)
 		])
 		.then (([plantRes]) => {
 			return Promise.all([

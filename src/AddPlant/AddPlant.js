@@ -5,6 +5,8 @@ import './plant-form.css'
 import config from '../config'
 import PropTypes from 'prop-types';
 
+const {API_BASE_URL} = config;
+
 
 class AddPlant extends React.Component {
    static contextType = BlissfulContext;
@@ -46,7 +48,7 @@ class AddPlant extends React.Component {
          num_days
        }))(this.state);
 
-       fetch(`${config.API_ENDPOINT}/api/plants`, {
+       fetch(`${API_BASE_URL}/plants`, {
          method: 'POST',
          headers: {
            'content-type': 'application/json'
