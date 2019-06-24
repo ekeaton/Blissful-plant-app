@@ -5,7 +5,7 @@ import BlissfulContext from '../BlissfulContext'
 import config from '../config';
 import './water-schedule.css'
 
-const {API_BASE_URL} = config;
+
 
 
 class WaterSchedule extends React.Component {
@@ -19,7 +19,7 @@ class WaterSchedule extends React.Component {
         const plantId = this.props.id
         console.log(plantId)
     
-        fetch(`${API_BASE_URL}/plants/${plantId}`, {
+        fetch(`${config.API_ENDPOINT}/plants/${plantId}`, {
           method: "DELETE",
           headers: {
             "content-type": "application/json"

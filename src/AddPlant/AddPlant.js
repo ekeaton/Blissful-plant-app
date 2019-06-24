@@ -5,7 +5,7 @@ import './plant-form.css'
 import config from '../config'
 import PropTypes from 'prop-types';
 
-const {API_BASE_URL} = config;
+
 
 
 class AddPlant extends React.Component {
@@ -48,7 +48,7 @@ class AddPlant extends React.Component {
          num_days
        }))(this.state);
 
-       fetch(`${API_BASE_URL}/plants`, {
+       fetch(`${config.API_ENDPOINT}/plants`, {
          method: 'POST',
          headers: {
            'content-type': 'application/json'
