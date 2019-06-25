@@ -19,6 +19,7 @@ class SignUpModal extends React.Component {
         className="modal"
         overlayClassName="overlay"
         contentLabel="Sign Up Modal"
+        ariaHideApp={false}
         closeTimeoutMS={300}
         isOpen={this.props.isOpen}
         onRequestClose={this.props.onRequestClose}

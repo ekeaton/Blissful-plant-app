@@ -3,9 +3,8 @@ import DemoNav from '../DemoNav/DemoNav';
 import PropTypes from "prop-types";
 import BlissfulContext from '../BlissfulContext'
 import config from '../config';
-import './water-schedule.css'
-
-
+import './water-schedule.css';
+import { format } from "date-fns";
 
 
 class WaterSchedule extends React.Component {
@@ -14,12 +13,12 @@ class WaterSchedule extends React.Component {
       }
     static contextType = BlissfulContext;
     
-      handleClickDelete = e => {
+      handleClickDelete = (id, e) => {
+        console.log(e)
         e.preventDefault();
-        const plantId = this.props.id
-        console.log(plantId)
+      
     
-        fetch(`${config.API_ENDPOINT}/plants/${plantId}`, {
+        fetch(`${config.API_ENDPOINT}/plants/${id}`, {
           method: "DELETE",
           headers: {
             "content-type": "application/json"
@@ -30,15 +29,15 @@ class WaterSchedule extends React.Component {
             return null; //res.json();
           })
           .then(() => {
-            this.context.deletePlant(plantId);
-            this.props.onDeletePlant(plantId)
+            this.context.deletePlant(id);
+            //window.location = `/demo`;
           })
           .catch(error => {
             console.error({ error });
           });
       };
-    
-        render() {
+
+      render() {
        
         return (
              <>
@@ -54,8 +53,15 @@ class WaterSchedule extends React.Component {
                                 <p>{plant.note}</p>
                                 <p>Water me in {plant.num_days} days</p>
                                   <p>Next watering</p>
-                                  <p>{plant.water_date.toString()}</p>
+                                  <p>{format(plant.water_date, "MM/DD/YYYY")}</p>
                             </section>
+                          <button
+                              className="Remove-button"
+                              type="button"
+                              onClick={(e) => this.handleClickDelete(plant.id , e)}
+                              >
+                              Remove
+                               </button>
                            </section>
                     )
                 })}

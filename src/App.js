@@ -41,37 +41,26 @@ class App extends React.Component {
 	}
 
 	
-  handleDeletePlant = plantId => {
+  handleDeletePlant = id => {
+    let updatedPlants = this.state.plants.filter(plant => plant.id !== id);
     this.setState({
-      plants: this.state.plants.filter(plant => plant.id !== plantId)
-    })
-  }
-
-
-  	handleAddPlant = newPlant => {
-  		const newPlants = this.state.plants.map(plant => 
-  			(plant.id === newPlant.id)
-  			? newPlant
-  			: plant)
-  		this.setState({
-  			plants:newPlants
-  		})
-  	};
+      plants: updatedPlants,
+    
+    });
+  };
 
   	
-
-
   render() {
     const value = {
 			plants: this.state.plants,	
       deletePlant: this.handleDeletePlant,
-      addPlant: this.handleAddPlant
+      addPlant: this.handleAddPlant,
+     
 	
 		}
   
   return (
     <BlissfulContext.Provider value={value}>
-    console.log(value);
     <div className="App app-background">
      <MainNav/>
       <main className="main-content">
@@ -92,8 +81,8 @@ class App extends React.Component {
            component={AddPlant}/>
         </ErrorBoundary>
        </Switch>
-      </main>
-    </div>
+       </main>
+      </div>
     </BlissfulContext.Provider>
   )
  }

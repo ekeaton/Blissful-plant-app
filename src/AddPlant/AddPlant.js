@@ -37,38 +37,39 @@ class AddPlant extends React.Component {
       this.setState({water_date})
    }
 
+   plantSubmitHandle = e => {
+    e.preventDefault();
+    let { name, note, id, water_date, num_days } = this.state;
+    const newPlant = { name, note, water_date, num_days, id };
+    fetch(`${config.API_ENDPOINT}/plants`, {
+      method: "POST",
+      body: JSON.stringify(newPlant),
+      headers: {
+        "content-type": "application/json",
+      }
+    })
+      .then(res => {
+        if (!res.ok) {
+          throw new Error("Something went wrong please try again later");
+        }
+        res.json().then(data => (window.location = `/demo/${data.id}`));
+        return;
+      })
+      .then(() => {
+        this.setState({
+          name: "",
+          note: "",
+          num_days: null,
+          water_date: new Date()
+        });
+        this.context.addPlant(newPlant);
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  };
+
    
-   handleSubmit = e => {
-       e.preventDefault()
-       const plant = (({ name, note, id, water_date, num_days }) => ({
-         name,
-         note,
-         id,
-         water_date,
-         num_days
-       }))(this.state);
-
-       fetch(`${config.API_ENDPOINT}/plants`, {
-         method: 'POST',
-         headers: {
-           'content-type': 'application/json'
-         },
-         body: JSON.stringify(plant),
-       })
-         .then(res => {
-           if (!res.ok)
-             return res.json().then(e => Promise.reject(e))
-           return res.json()
-         })
-         .then(plant => {
-           this.context.addPlant(plant)
-           this.props.history.push(`/demo/${plant.id}`)
-         })
-         .catch(error => {
-           console.error({ error })
-         })
-     }
-
    render () {
        return (
          <>
@@ -77,7 +78,7 @@ class AddPlant extends React.Component {
          </header>
           <section className="plant-form-section">
            <div className="form-style-5">
-            <form id="plant-form"  className='plant-form' onSubmit={this.handleSubmit}>
+            <form id="plant-form"  className='plant-form' onSubmit={this.plantSubmitHandle}>
                <input type="text" name="field1" placeholder="Name of Plant *" onChange={e => this.updatePlantName(e.target.value)}/>
 
                   <label htmlFor="note"><i>Optional:</i></label>
