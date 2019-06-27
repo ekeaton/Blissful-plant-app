@@ -1,6 +1,11 @@
 * {
   box-sizing: border-box;
+  padding: 0;
 }
+
+/*html, body {
+  height: 100%;
+}*/
 
 body {
   margin: 0;
@@ -19,3 +24,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+@media only screen and (min-width: 1024px) {
+  footer{margin-top: 610px;}
+}
+
+@media only screen and (max-width: 768px) {
+  footer{margin-top: 139px;}
+}
+
+

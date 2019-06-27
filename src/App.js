@@ -9,6 +9,8 @@ import AddPlant from './AddPlant/AddPlant';
 import config from './config';
 import BlissfulContext from './BlissfulContext';
 import ErrorBoundary from "./ErrorBoundary";
+import Footer from './Footer/Footer';
+
 
 
 class App extends React.Component {
@@ -82,6 +84,7 @@ class App extends React.Component {
         </ErrorBoundary>
        </Switch>
        </main>
+       <Footer />
       </div>
     </BlissfulContext.Provider>
   )

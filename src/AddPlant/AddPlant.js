@@ -79,7 +79,7 @@ class AddPlant extends React.Component {
           <section className="plant-form-section">
            <div className="form-style-5">
             <form id="plant-form"  className='plant-form' onSubmit={this.plantSubmitHandle}>
-               <input type="text" name="field1" placeholder="Name of Plant *" onChange={e => this.updatePlantName(e.target.value)}/>
+               <input type="text" name="field1" placeholder="Name of Plant *" required onChange={e => this.updatePlantName(e.target.value)}/>
 
                   <label htmlFor="note"><i>Optional:</i></label>
                      <textarea name="field3" placeholder="Note" onChange={e => this.updatePlantNote(e.target.value)}></textarea>
@@ -88,10 +88,10 @@ class AddPlant extends React.Component {
 
              <div className="form-section">
              <label htmlFor="number_days">In how many days?</label>
-                 <input type="number" placeholder="06" min="1" max="31" required="" onChange={e => this.updatePlantDays(e.target.value)}/>
+                 <input type="number" min="1" max="31" required onChange={e => this.updatePlantDays(e.target.value)}/>
 
                 <label htmlFor="water-date">Next Day to Water:</label> 
-               <input type="date" name="date-month" placeholder="06" min="1" max="12" required="" onChange={e => this.updatePlantWater(e.target.value)}/> 
+               <input type="date" name="date-month" placeholder="0" min="1" max="12" required onChange={e => this.updatePlantWater(e.target.value)}/> 
              </div>
             <button type="submit" className="create-btn">Create water schedule</button>
             <button type="reset" className="res-btn">Reset</button>

@@ -22,7 +22,6 @@
 }
 .form-style-5 input[type="text"],
 .form-style-5 input[type="datetime"],
-.form-style-5 input[type="email"],
 .form-style-5 input[type="number"],
 .form-style-5 input[type="url"],
 
@@ -48,11 +47,9 @@
 .form-style-5 input[type="text"]:focus,
 .form-style-5 input[type="date"]:focus,
 .form-style-5 input[type="datetime"]:focus,
-.form-style-5 input[type="email"]:focus,
 .form-style-5 input[type="number"]:focus,
 .form-style-5 input[type="search"]:focus,
 .form-style-5 input[type="time"]:focus,
-.form-style-5 input[type="url"]:focus,
 .form-style-5 textarea:focus,
 .form-style-5 select:focus{
 	background: #d2d9dd;

@@ -1,8 +1,6 @@
-.App {
+/*.App {
   text-align: center;
-}
-
-
+}*/
 
 
 p {
@@ -14,9 +12,12 @@ p + p {
   margin-top: 15px;
 }
 
-
 .app-background {
-  background: url('https://i.imgur.com/5jqecQC.png');
-  background-repeat: no-repeat;
+  background: url('https://i.imgur.com/GAbmsYj.png');
+  background-repeat: repeat;
   background-size: cover;
+  height: 100%;
 }
+
+
+

@@ -1,5 +1,5 @@
 
-nav {
+.main-nav-container {
     position: fixed;
     top: 0;
     left: 0;
@@ -10,23 +10,34 @@ nav {
     background-color: #8FBC8F;
 }
 
-  .nav-logo {
+  .plant-logo {
       width: 350px; 
   }
 
-  div.logo {
+  .main-logo-container {
     float: left;
   }
   
-  div.nav-menu {
+  .main-nav {
     float: right;
   }
 
 /* Style the links inside the navigation bar */
-.nav-menu a {
+.main-nav a {
     color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
   }
+
+  @media only screen and (max-width: 600px) {
+    .main-logo-container {float: none;}
+    .plant-logo{
+      position: relative;
+      left: 10%;
+    }
+    .main-nav {float: none;}
+    .main-nav-container {position: none;}
+  }
+  

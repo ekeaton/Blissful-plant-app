@@ -5,18 +5,18 @@ import './demo-nav.css'
 
 function DemoNav() {
     return(
-      <nav className="navbar">
-         <div className="logo">
+      <nav className="demo-nav-container">
+         <div className="demo-logo-container">
               <Link
                className="nav__link"
                to="/"
                rel="noopener noreferrer">
-            <img className="nav-logo" src="https://i.imgur.com/pAcLOh0.png" alt="blissful-plant logo"/>
+            <img className="plant-logo" src="https://i.imgur.com/pAcLOh0.png" alt="blissful-plant logo"/>
              </Link>
           </div>
-        <div className="nav-menu">
-         <Link to="/demo" className="nav__link">Water Schedule</Link>
-         <Link to="/add-plant" className="nav__link">Add Plant</Link>
+        <div className="demo-nav">
+         <Link to="/demo" className="nav__link"><b>Water Schedule</b></Link>
+         <Link to="/add-plant" className="nav__link"><b>Add Plant</b></Link>
         </div>
       </nav>
     )

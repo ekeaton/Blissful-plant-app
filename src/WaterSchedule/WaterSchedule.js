@@ -30,7 +30,7 @@ class WaterSchedule extends React.Component {
           })
           .then(() => {
             this.context.deletePlant(id);
-            //window.location = `/demo`;
+             //window.location = '/demo';
           })
           .catch(error => {
             console.error({ error });
@@ -42,13 +42,13 @@ class WaterSchedule extends React.Component {
         return (
              <>
             <DemoNav/>
-              <header role="banner">
+              <header>
                  <h1>Water Schedule</h1>
                </header>
                 {this.context.plants.map(plant => {
                     return (
                         <section key={plant.id} className='card'>
-                            <h4>{plant.name}</h4>
+                            <h2>{plant.name}</h2>
                             <section className='container'>
                                 <p>{plant.note}</p>
                                 <p>Water me in {plant.num_days} days</p>

@@ -20,11 +20,12 @@
   
   .modal {
     border-radius: 5px;
-    color: white;
+    color: black;
     outline: none;
     padding: 2rem 4rem;
     position: relative;
     text-align: center;
+    background: white;
   }
   
   .overlay {
@@ -46,15 +47,15 @@
 	text-align: center;
 	font-style: normal;
 	width: 80px;
-    border: 1px solid #16a085;
-    border-radius: 10%;
+  border: 1px solid #16a085;
+  border-radius: 10%;
 	border-width: 1px 1px 3px;
-    margin-bottom: 10px;
-    margin-left: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
 }
 
 .beta-form__button {
-    position: relative;
+  position: relative;
 	padding: 10px 10px;
 	color: #FFF;
 	margin: 0 auto;
@@ -63,15 +64,15 @@
 	text-align: center;
 	font-style: normal;
 	width: 150px;
-    border: 1px solid #16a085;
-    border-radius: 10%;
+  border: 1px solid #16a085;
+  border-radius: 10%;
 	border-width: 1px 1px 3px;
-    margin-bottom: 10px;
-    margin-left: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
 }
 
 input[type="email"] {
-    font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
 	background: rgba(255,255,255,.1);
 	border: none;
 	border-radius: 4px;
@@ -93,4 +94,8 @@ input[type="email"] {
 
 .beta-form__brand {
     width: 10%;
+}
+
+.beta-form__text {
+  margin-bottom: 20px;
 }

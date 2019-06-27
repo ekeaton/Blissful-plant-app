@@ -3,6 +3,7 @@
 	padding: 10px 20px;
 	background: #f4f7f8;
 	margin: 10px auto;
+	margin-bottom: 20px;
 	padding: 20px;
 	background: #f4f7f8;
 	border-radius: 8px;
@@ -10,9 +11,9 @@
     border: solid 1px;
 }
 
-.card input[type="submit"],
-.card input[type="button"]
-{
+/*.card input[type="submit"],
+.card input[type="button"]*/
+.Remove-button {
 	position: relative;
 	padding: 19px 39px 18px 39px;
 	color: #FFF;
@@ -21,13 +22,14 @@
 	font-size: 18px;
 	text-align: center;
 	font-style: normal;
-	width: 30%;
 	border: 1px solid #16a085;
 	border-width: 1px 1px 3px;
     margin-bottom: 10px;
-    margin-left: 10px;
+	margin-left: 10px;
+	margin-top: 20px;
+	border-radius: 5%;
 }
-.card input[type="button"]:hover
-{
+/*.card input[type="button"]:hover*/
+.Remove-button[type="button"]:hover {
 	background: #109177;
 }
