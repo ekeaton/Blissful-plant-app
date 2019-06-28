@@ -14,7 +14,6 @@ import Footer from './Footer/Footer';
 
 
 class App extends React.Component {
-
   state = { 
     plants: [],
   }

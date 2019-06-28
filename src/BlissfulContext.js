@@ -4,7 +4,6 @@ export default React.createContext({
   plants: [],
   deletePlant: () => {},
   addPlant: () => {},
-  updatePlant: () => {},
 });
 
 

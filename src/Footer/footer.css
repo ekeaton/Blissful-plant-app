@@ -2,3 +2,12 @@ footer {
     background-color: #8FBC8F;
     padding-top: 30px;
   }
+
+  @media only screen and (min-width: 1024px) {
+    footer{margin-top: 610px;}
+  }
+  
+  @media only screen and (max-width: 768px) {
+    footer{margin-top: 139px;}
+  }
+  

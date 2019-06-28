@@ -30,7 +30,6 @@ class WaterSchedule extends React.Component {
           })
           .then(() => {
             this.context.deletePlant(id);
-             //window.location = '/demo';
           })
           .catch(error => {
             console.error({ error });

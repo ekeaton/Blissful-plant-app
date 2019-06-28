@@ -3,10 +3,6 @@
   padding: 0;
 }
 
-/*html, body {
-  height: 100%;
-}*/
-
 body {
   margin: 0;
   font-size: 20px;
@@ -25,12 +21,12 @@ code {
     monospace;
 }
 
-@media only screen and (min-width: 1024px) {
+/*@media only screen and (min-width: 1024px) {
   footer{margin-top: 610px;}
 }
 
 @media only screen and (max-width: 768px) {
   footer{margin-top: 139px;}
-}
+}*/
 
 
