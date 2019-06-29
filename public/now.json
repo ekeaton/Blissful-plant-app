@@ -2,13 +2,6 @@
     "version": 2,
     "alias": "my-blissful-plant-app",
     "name": "blissful-plant-app",
-    "builds": [
-      {
-        "src": "package.json",
-        "use": "@now/static-build",
-        "config": { "distDir": "build" }
-      }
-    ],
     "routes": [
         {
           "src": "^/static/(.*)",
