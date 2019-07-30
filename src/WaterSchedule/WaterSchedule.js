@@ -41,9 +41,8 @@ class WaterSchedule extends React.Component {
         return (
              <>
             <DemoNav/>
-              <header>
-                 <h1>Water Schedule</h1>
-               </header>
+             <header>
+               </header> 
                 {this.context.plants.map(plant => {
                     return (
                         <section key={plant.id} className='card'>

@@ -1,10 +1,11 @@
 footer {
     background-color: #8FBC8F;
-    padding-top: 30px;
+    padding: 1% 0;
+    bottom: 0;
   }
 
   @media only screen and (min-width: 1024px) {
-    footer{margin-top: 610px;}
+    footer{margin-top: 100px;}
   }
   
   @media only screen and (max-width: 768px) {

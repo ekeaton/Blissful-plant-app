@@ -20,6 +20,7 @@
   
   .main-nav {
     float: right;
+    padding-top: 10px; 
   }
 
 /* Style the links inside the navigation bar */
@@ -28,7 +29,8 @@
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 20px;
+    font-family: Georgia, "Times New Roman", Times, serif;
   }
 
   @media only screen and (max-width: 600px) {
@@ -41,3 +43,10 @@
     .main-nav-container {position: none;}
   }
   
+  @media only screen and (max-width: 414px) {
+    .main-nav-container {
+      padding: 0;
+      height: auto;
+  }
+  
+    }

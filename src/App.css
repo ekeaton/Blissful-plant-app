@@ -8,12 +8,12 @@ p + p {
   margin-top: 15px;
 }
 
-.app-background {
-  background: url('https://i.imgur.com/GAbmsYj.png');
-  background-repeat: repeat;
+html {
+  background: url(https://www.womanonly.cz/wp-content/uploads/2019/04/aloe-vera-pokojove-rostliny-737x415.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  height: 100%;
 }
-
 
 

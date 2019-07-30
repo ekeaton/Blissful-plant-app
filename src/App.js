@@ -1,6 +1,5 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom'
-import MainNav from './MainNav/MainNav';
 import WaterSchedule from './WaterSchedule/WaterSchedule'
 import './App.css';
 import SignUpModal from './SignUpModal/SignUpModal';
@@ -63,7 +62,6 @@ class App extends React.Component {
   return (
     <BlissfulContext.Provider value={value}>
     <div className="App app-background">
-     <MainNav/>
       <main className="main-content">
       <Switch>
       <ErrorBoundary>

@@ -59,7 +59,7 @@
 	padding: 10px 10px;
 	color: #FFF;
 	margin: 0 auto;
-	background: #1abc9c;
+  background: #1abc9c;
 	font-size: 15px;
 	text-align: center;
 	font-style: normal;
@@ -69,6 +69,7 @@
 	border-width: 1px 1px 3px;
   margin-bottom: 10px;
   margin-left: 10px;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 input[type="email"] {

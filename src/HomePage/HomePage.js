@@ -1,13 +1,17 @@
 import React from 'react';
 import Header from '../Header/Header'
-
+import MainNav from '../MainNav/MainNav';
 import './home-page.css'
+
 
 
 function HomePage() {
     return (
       <>
+      <MainNav/>
        <Header/>
+       <br/>
+       <br/>
        <div className="row">
            <section className="home-card">
              <h3>Do you forget to water your plants?</h3>

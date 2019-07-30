@@ -26,7 +26,7 @@ class MainNav extends React.Component {
             <img className="plant-logo" src="https://i.imgur.com/pAcLOh0.png" alt="blissful-plant logo"/>
              </Link>
           </div>
-  
+
           <div className="main-nav">
            <Link to="#" className="nav-link" onClick={this.handleOpenModal}><b>Sign Up</b></Link>
            <Link to="/demo" className="nav__link"><b>Demo</b></Link>
@@ -41,8 +41,6 @@ class MainNav extends React.Component {
       )
     }
   }
-  
-  
+
+
 export default MainNav;
-
-

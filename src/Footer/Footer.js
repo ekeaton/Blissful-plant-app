@@ -4,8 +4,7 @@ import './footer.css'
 function Footer() {
     return (
         <footer>
-             <p>Created by: Estelle Keaton</p>
-             <p>Copyright @ 2019</p>
+             <p>&copy; Created by Estelle Keaton</p>
         </footer>
     )
 }
