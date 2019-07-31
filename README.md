@@ -14,17 +14,17 @@ Screenshots
 
 ### *Home Page*
 
-![Landing page](https://i.imgur.com/nxj5PR4.png)
+![Landing page](https://i.gyazo.com/4d01fd17b801061a2a46dfc54f2ac363.png)
 
 
 ### *Water Schedule Demo Page*
 
-![Water Schedule Demo](https://i.imgur.com/uN8YCAM.png)
+![Water Schedule Demo](https://i.gyazo.com/0d076559f3e2d3349bda3430b75d16a5.png)
 
 
 ### *Plant Form*
 
-![Plant Form](https://i.imgur.com/i1lzMku.png)
+![Plant Form](https://i.gyazo.com/fcc06abbd609aba6b0b21d2f00a7d4fc.png)
 
 Built With
 ------------------
